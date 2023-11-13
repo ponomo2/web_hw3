@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block nav_left %}
+<!-- если не авторизован вызываем одно, если авторизован другое. Пока пусть будет авторизован всегда-->
+  {% include 'auth_nav_right.html' %}
+{% endblock %}
+
+{% block ask_button %}
+<!-- потом добавлю что она disabled если не авторизован-->
+<a class="btn btn-success ml-5 my-0" href="#" role="button" >Ask!</a>
+{% endblock %}
+
+{% block title %}
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-8 ml-5 mt-4">
+        <table>
+          <tbody>
+            <tr>
+              <td class="align-baseline"><h2>New questions</h2></td>
+              <td class="align-baseline">
+                <h4>
+                  <a class="link active mx-5" href="#">Hot questions</a>
+                </h4>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+{% endblock %}
+
+{% block main_block %}
+{% include 'question_card.html' %}
+{% endblock %}
+
+{% block pagination %}
+{% include 'pagination.html' %}
+{% endblock %}

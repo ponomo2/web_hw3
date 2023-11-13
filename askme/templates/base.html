@@ -26,7 +26,7 @@
 
       <div class="col-2">
         <ul class="list-unstyled">
-
+        {% block nav_left %} {% endblock %}
           <!-- отличается если пользователь авторизован и нет -->
         </ul>
       </div>
@@ -56,36 +56,8 @@
         либо сначала вопрос
         потом карточки с ответами -->
       </div>
-      <div class="col-2 ml-5 my-0">
-        <h3>Popular Tags</h3>
-        <div class="mr-0">
-          {% block popular_tags %} {% endblock %}
-          <!-- <a class="link active mx-sm-2" href="#">Tag</a>
-            теги -->
-        </div>
-          <h3 class="mt-3">Best members</h3>
-          <ul class="list-unstyled">
-            <li class="my-1">
-              {% block best_members %} {% endblock %}
-              <!-- <a class="link active mx-sm-2" href="#">Member</a>
-              members -->
-            </li>
-            <!-- каждый элемент списка - пользователь -->
-          </ul>
+      {% include 'rightside.html'  %}
       </div>
-    </div>
-    <div class="row">
-      <div class="col-4"></div>
-      <div class="ml-5">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">53</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    {% block pagination %} {% endblock %}
   </body>
 </html>

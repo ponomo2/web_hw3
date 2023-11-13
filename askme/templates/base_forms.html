@@ -46,24 +46,7 @@
       <div class="col-7">
       {% block forms %} {% endblock %}
     </div>
-
-      <div class="col-2 ml-5 my-0">
-        <h3>Popular Tags</h3>
-        <div class="mr-0">
-          {% block popular_tags %} {% endblock %}
-          <!-- <a class="link active mx-sm-2" href="#">Tag</a>
-            теги -->
-        </div>
-          <h3 class="mt-3">Best members</h3>
-          <ul class="list-unstyled">
-            <li class="my-1">
-              {% block best_members %} {% endblock %}
-              <!-- <a class="link active mx-sm-2" href="#">Member</a>
-              members -->
-            </li>
-            <!-- каждый элемент списка - пользователь -->
-          </ul>
-      </div>
+      {% include "rightside.html"  %}
     </div>
 
     <div class="row">
