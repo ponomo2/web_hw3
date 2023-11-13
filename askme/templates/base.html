@@ -6,12 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ask ponomo2</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="col-2">
-        <a class="navbar-brand mx-sm-2" href="#">AskPonomo2</a>
+        <a class="navbar-brand mx-sm-2" href="{% url 'mainQP' %}">AskPonomo2</a>
       </div>
       <div class="col-8">
         <form class="form-inline my-lg-0">
@@ -23,6 +25,17 @@
 
       <div class="col-2">
         <ul class="list-unstyled">
+          <li class="media my-1">
+            <img class="img-fluid mt-1 mb-0" src="https://foto-like.ru/wp-content/uploads/Adobe_Photoshop_CS4_XCV_Edition_Micr.png" alt="Avatar" width="48" height="48">
+            <div class="media-body mr-sm-2 ml-sm-2" >
+              <p class="text-md-left mr-sm-2 ml-sm-2 my-lg-0">Nickname</p>
+              <a class="link active mr-sm-2 ml-sm-2" href="{% url 'settingsP' %}">Settings</a>
+              <a class="link active mr-sm-2 ml-sm-2" href="#">Exit</a>
+              <a class="link active mr-sm-2 ml-sm-2" href="{% url 'loginP' %}">Sign in</a>
+              <a class="link active mr-sm-2 ml-sm-2" href="{% url 'signupP' %}">Sign up</a>
+            </div>
+          </li>
+
       <!-- отличается если пользователь авторизован и нет -->
         </ul>
       </div>
@@ -46,6 +59,36 @@
     <div class="row">
       <div class="col-1"></div>
       <div class="col-8">
+        <div class="card ml-5 my-4">
+          <ul class="list-unstyled">
+              <li class="media my-1">
+                  <img class="img-fluid mx-4 mt-5 mb-4 pt-3" src="https://foto-like.ru/wp-content/uploads/Adobe_Photoshop_CS4_XCV_Edition_Micr.png" alt="Avatar" width="80" height="80">
+                  <div class="media-body mr-sm-2 ml-sm-2" >
+                      <h4 class="mt-4 mb-2"><a class="link active" href="#">Question is here</a></h4>
+                      <p class="text-md-left mr-sm-4 ml-sm-0 mb-3">
+                          a sentence or phrase used to find out information:
+                            The police asked me questions all day.
+                            Why won't you answer my question?
+                            "So where is the missing money?" "That's a good question." (= I don't know the answer.)
+                            There will be a question-and-answer session (= a period when people can ask questions) at the end of the talk.</p>
+                      <div>
+                          <a class="link active mr-sm-2" href="#">Answer(3)</a>
+                          Tags:
+                          <a class="link active mx-sm-2" href="{% url 'tagQP' %}">Tag</a>
+                          <a class="link active mx-sm-2" href="#">Tag</a>
+                          <a class="link active mx-sm-2" href="#">Tag</a>
+                          <a class="link active mx-sm-2" href="#">Tag</a>
+                      </div>
+                  </div>
+              </li>
+              <li class="media pl-2 my-2">
+                  <img class="" alt="Avatar" width="20" height="20">
+                  <h6>1</h6>
+                  <img class="img-fluid ml-2" src="https://cdn.icon-icons.com/icons2/930/PNG/512/arrow-up_icon-icons.com_72374.png" alt="Avatar" width="20" height="16">
+                  <h6>2</h6>
+              </li>
+          </ul>
+      </div>
         <!-- здесь либо сразу карточки с вопросами
         либо сначала вопрос
         потом карточки с ответами -->
@@ -79,8 +122,5 @@
         </nav>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
