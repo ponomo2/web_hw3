@@ -1,19 +1,19 @@
 <div class="card ml-5 my-4">
     <ul class="list-unstyled">
         <li class="media my-1">
-            <img class="img-fluid mx-4 mt-5 mb-4 pt-3" src="https://foto-like.ru/wp-content/uploads/Adobe_Photoshop_CS4_XCV_Edition_Micr.png" alt="Avatar" width="80" height="80">
+            <img class="img-fluid mx-4 mt-5 mb-4 pt-3" src="{% url 'img/default_avatar.png' %}" alt="Avatar" width="80" height="80">
             <div class="media-body mr-sm-2 ml-sm-2" >
-                <h4 class="mt-4 mb-2"><a class="link active" href="#">Question is here</a></h4>
+                <h4 class="mt-4 mb-2"><a class="link active" href="{% url 'oneQP' %}">Question is here</a></h4>
                 <p class="text-md-left mr-sm-4 ml-sm-0 mb-3">
-                    a sentence or phrase used to find out information:
-                      The police asked me questions all day.
-                      Why won't you answer my question?
-                      "So where is the missing money?" "That's a good question." (= I don't know the answer.)
-                      There will be a question-and-answer session (= a period when people can ask questions) at the end of the talk.</p>
+                a sentence or phrase used to find out information:
+                The police asked me questions all day.
+                Why won't you answer my question?
+                "So where is the missing money?" "That's a good question." (= I don't know the answer.)
+                There will be a question-and-answer session (= a period when people can ask questions) at the end of the talk.</p>
                 <div>
                     <a class="link active mr-sm-2" href="#">Answer(3)</a>
                     Tags:
-                    <a class="link active mx-sm-2" href="#">Tag</a>
+                    <a class="link active mx-sm-2" href="{% url 'tagQP' %}">Tag</a>
                     <a class="link active mx-sm-2" href="#">Tag</a>
                     <a class="link active mx-sm-2" href="#">Tag</a>
                     <a class="link active mx-sm-2" href="#">Tag</a>
@@ -21,9 +21,9 @@
             </div>
         </li>
         <li class="media pl-2 my-2">
-            <img class="" alt="Avatar" width="20" height="20">
+            <img class="img-fluid ml-2 mr-1" src="{% static 'img/arrow_up.png' %}" alt="Arrow up" width="20" height="20">
             <h6>1</h6>
-            <img class="img-fluid ml-2" src="https://cdn.icon-icons.com/icons2/930/PNG/512/arrow-up_icon-icons.com_72374.png" alt="Avatar" width="20" height="16">
+            <img class="img-fluid ml-2 mr-1" src="{% static 'img/arrow_down.png' %}" alt="Arrow down" width="20" height="18">
             <h6>2</h6>
         </li>
     </ul>

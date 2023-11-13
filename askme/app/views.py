@@ -4,6 +4,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'base.html')
 
+def question(request):
+    return render(request, 'base.html')
+
 def tag(request):
     return render(request, 'base.html')
 
@@ -18,3 +21,7 @@ def ask(request):
 
 def settings(request):
     return render(request, 'base.html')
+
+# def paginate(objects_list, request, per_page=10):
+#     # do smth with Paginator, etc…
+#     return page
