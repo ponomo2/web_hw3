@@ -1,17 +1,17 @@
 {% load static %}
 
 {% for question in page_obj %}
-<div class="card ml-5 my-4" id="question{{ question.id }}">
+<div class="card ml-5 my-4" style="width: 70rem" id="question{{ question.id }}">
     <ul class="list-unstyled">
         <li class="media my-1">
             <img class="img-fluid mx-4 mt-3 mb-4 pt-3" src="{% static 'img/default_avatar.png' %}" alt="Avatar" width="80" height="80">
             <div class="media-body mr-sm-2 ml-sm-2" >
-                <h4 class="mt-4 mb-2"><a class="link active" href="{% url 'oneQP' %}">{{ question.title }}</a></h4>
+                <h4 class="mt-4 mb-2"><a class="link active" href="{% url 'oneQP' num=question.id %}">{{ question.title }}</a></h4>
                 <p class="text-md-left mr-sm-4 ml-sm-0 mb-3">
                     {{ question.text }}
                 </p>
                 <div>
-                    <a class="link active mr-sm-2" href="#">Answer({{ question.answerNum }})</a>
+                    <a class="link active mr-sm-2" href="{% url 'oneQP' num=question.id %}">Answer({{ question.answerNum }})</a>
                     Tags:
                     {% for tag in question.tags %}
                         <a class="link active mx-sm-2" href="{% url 'tagQP' %}">{{ tag }}</a>
