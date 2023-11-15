@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "basic/base.html" %}
 {% load static %}
 
 {% block nav_left %}
 <!-- если не авторизован вызываем одно, если авторизован другое. Пока пусть будет авторизован всегда-->
-  {% include 'auth_nav_right.html' %}
+  {% include 'basic/auth_nav_right.html' %}
 {% endblock %}
 
 
@@ -37,14 +37,14 @@
 
         <hr class="hr"/>
 
-        {% include 'answer_card.html' %}
+        {% include 'basic/answer_card.html' %}
 
 
 </div>
 {% endblock %}
 
 {% block pagination %}
-{% include 'pagination.html' %}
+{% include 'basic/pagination.html' %}
 <div class="row">
 <div class="col-2"></div>
  <div class="col-7 ml-5">
@@ -62,9 +62,5 @@
 
 
 </div>
-
-  {% block rightside1 %}
-    {% include 'rightside.html'  %}
-  {% endblock %}
 
 </div>

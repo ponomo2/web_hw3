@@ -1,8 +1,8 @@
-{% extends "base.html" %}
+{% extends "basic/base.html" %}
 
 {% block nav_left %}
 <!-- если не авторизован вызываем одно, если авторизован другое. Пока пусть будет авторизован всегда-->
-  {% include 'auth_nav_right.html' %}
+  {% include 'basic/auth_nav_right.html' %}
 {% endblock %}
 
 
@@ -34,14 +34,14 @@
 {% block main_block %}
 <div class="col-1"></div>
 <div class="col-8 ml-5">
-{% include 'question_card.html' %}
+{% include 'basic/question_card.html' %}
 </div>
 {% endblock %}
 
-{% block rightside1 %}
-{% include 'rightside.html'  %}
-{% endblock %}
+<!--{% block rightside1 %}-->
+<!--{% include 'basic/rightside.html'  %}-->
+<!--{% endblock %}-->
 
 {% block pagination %}
-{% include 'pagination.html' %}
+{% include 'basic/pagination.html' %}
 {% endblock %}

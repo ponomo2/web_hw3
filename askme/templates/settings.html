@@ -1,8 +1,7 @@
-{% extends "base.html" %}
-
+{% extends "basic/base.html" %}
 {% block nav_left %}
 <!-- если не авторизован вызываем одно, если авторизован другое. Пока пусть будет авторизован всегда-->
-  {% include 'auth_nav_right.html' %}
+  {% include 'basic/auth_nav_right.html' %}
 {% endblock %}
 
 
@@ -43,7 +42,5 @@
       </div>
 {% endblock %}
 
-{% block rightside1 %}
-{% include 'rightside.html'  %}
-{% endblock %}
+
 </div>

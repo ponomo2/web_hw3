@@ -18,7 +18,7 @@
         <form class="form-inline my-lg-0">
           <input class="form-control mr-0" size="75" type="search" placeholder="Type your question here" aria-label="Search">
           <button class="btn btn-light ml-0 mt-0 mb-1 mr-5" type="submit"><img class="img-fluid mt-1 mb-0" src="{% static 'img/search.png' %}" alt="Search" width="25" height="25"></button>
-          {% include 'ask_button.html' %}
+          {% include 'basic/ask_button.html' %}
           <!--          <a class="btn btn-success ml-5 my-0" href="{% url 'tagQP' %}" role="button" >Ask!</a>-->
         </form>
       </div>
@@ -54,7 +54,7 @@
         либо сначала вопрос
         потом карточки с ответами -->
 
-      {% block rightside1 %} {% endblock %}
+      {% include 'basic/rightside.html'  %}
 
       </div>
     {% block pagination %} {% endblock %}
